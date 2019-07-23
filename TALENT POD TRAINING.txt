@@ -1,0 +1,124 @@
+https://www.youtube.com/watch?v=J_kTukE7hr8&list=PLBBog2r6uMCRcybG1UBB6yAqFZbwjAKHi&index=3
+https://www.youtube.com/watch?v=4x-HgnJ31cg&list=PLBBog2r6uMCRcybG1UBB6yAqFZbwjAKHi&index=9
+https://www.youtube.com/watch?v=ILRmPKEL4U0&list=PLBBog2r6uMCRcybG1UBB6yAqFZbwjAKHi&index=2
+https://www.youtube.com/watch?v=PSP1-2cN7vM&list=PLBBog2r6uMCRcybG1UBB6yAqFZbwjAKHi
+https://www.youtube.com/watch?v=PSP1-2cN7vM&list=PLBBog2r6uMCRcybG1UBB6yAqFZbwjAKHi
+https://www.youtube.com/user/rithustutorials/videos
+https://www.youtube.com/watch?v=Vp7q_pE7Fzg
+https://www.youtube.com/watch?v=8lEfj1cmBJ4
+https://www.youtube.com/watch?v=W9gz3NGeojU&t=181s
+
+
+
+ ██████╗ ██╗████████╗
+██╔════╝ ██║╚══██╔══╝
+██║  ███╗██║   ██║   
+██║   ██║██║   ██║   
+╚██████╔╝██║   ██║   
+ ╚═════╝ ╚═╝   ╚═╝   
+                     
+
+
+git checkout . //Retorna los cambios a su estado original
+git log
+git log --oneline	
+git log -p
+git log -- index.html
+git merge
+git merge -d NOMBRE_BRANCH elimina el branch origen
+git remote add origin
+git merge rama/master
+Buena practica
+varios comits pequeños que funcionen				 
+
+What are the two commands needed to set the default diff tool to use VSCode in the global config file?
+
+git config --global diff.tool code
+
+git config --global difftool.code.cmd "code --wait --diff $LOCAL $REMOTE"
+
+How do I list the variables that are set in my global config?
+
+git config --global --list
+
+What is the command to turn off diff tool prompting?
+
+git config --global difftool.prompt false
+
+git config --global merge.tool code
+git config --global mergetool.code.cmd "code --wait $MERGED"
+git config --global mergetool.prompt false
+git config --global mergetool.keepbackup false
+
+
+
+███╗   ███╗██╗ ██████╗██████╗  ██████╗ ███████╗███████╗██████╗ ██╗   ██╗██╗ ██████╗███████╗███████╗
+████╗ ████║██║██╔════╝██╔══██╗██╔═══██╗██╔════╝██╔════╝██╔══██╗██║   ██║██║██╔════╝██╔════╝██╔════╝
+██╔████╔██║██║██║     ██████╔╝██║   ██║███████╗█████╗  ██████╔╝██║   ██║██║██║     █████╗  ███████╗
+██║╚██╔╝██║██║██║     ██╔══██╗██║   ██║╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██║██║     ██╔══╝  ╚════██║
+██║ ╚═╝ ██║██║╚██████╗██║  ██║╚██████╔╝███████║███████╗██║  ██║ ╚████╔╝ ██║╚██████╗███████╗███████║
+╚═╝     ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝ ╚═════╝╚══════╝╚══════╝
+                                                                                                   
+██████╗  █████╗ ████████╗████████╗███████╗██████╗ ███╗   ██╗███████╗                               
+██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗████╗  ██║██╔════╝                               
+██████╔╝███████║   ██║      ██║   █████╗  ██████╔╝██╔██╗ ██║███████╗                               
+██╔═══╝ ██╔══██║   ██║      ██║   ██╔══╝  ██╔══██╗██║╚██╗██║╚════██║                               
+██║     ██║  ██║   ██║      ██║   ███████╗██║  ██║██║ ╚████║███████║                               
+╚═╝     ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝                               
+                                                                                                   
+
+
+Microservices Software Architecture: Patterns and Techniques
+
+Advantages:
+Low coupling
+Improves modularity
+Promotes parallel development
+Promotes scalability
+
+Important create a Microservices Template With
++ Logging
++ Metrics
++ Connection setup and configuration to databases and messages brokers
+
+DECOMPOSITION
+
+REMOTE PROCEDURE INVOCATION
+Request - Response
+Asynchronous Messaged Based comunication - Message Bus
+
+REGISTER
+
+DISCOVERY
+-> Service Registry
+Client Side DISCOVERY 
+Server Side Discovery - Load Balancer
+
+DATABASES
+Shared daabases
+Database per service
+
+Api composer that request for each service to provide information
+
+
+Event Store
+Track all the events happen on the sistem
+
+Order Creation SAGA in charge of create the events and be Orchestrator-based
+
+PATTERNS 
+
+* Failover Mechanism : Search and contact server alive
+* Circuit Breaker : 
+Using a timeout prevents a request from waiting indefinitely for a response. However, if a
+particular request always produces a timeout, you waste a lot of time waiting for the timeout to
+occur.
+A circuit breaker is designed to avoid repeating timeouts. It works in a similar way to the
+electronic version of the same name. The circuit breaker makes a note every time a specific
+request fails or produces a timeout. If this count reaches a certain level, it prevents further
+calls from occurring, instead of returning an error instantly. It also incorporates a mechanism
+for retrying the call, either after a certain amount of time or in reaction to an event.
+Circuit breakers are vital when calling external services. Generally, use one of the existing
+libraries for circuit breakers in Java. 
+* Health Api : Verify if the service is available before send request and interact with Service Register and Monitoring
+* Logging Techniques
